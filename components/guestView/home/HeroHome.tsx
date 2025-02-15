@@ -32,14 +32,14 @@ export default function HeroHome() {
     //   </div>
     // </div>
     <div className="flex items-center justivy-center w-full h-screen p-4">
-      <div className="p-6 md:m-[150px] rounded-lg overflow-hidden flex flex-col md:flex-row-reverse w-full max-w-full ">
+      <div className=" md:m-[100px] rounded-lg overflow-hidden flex flex-col md:flex-row-reverse w-full max-w-full ">
         <div className="w-full items-end justify-end flex">
           <Image
             src="/images/hero.png"
             alt="Image"
             width={250}
             height={250}
-            className="w-full h-full items-end justify-end flex pl-24"
+            className="w-full h-full items-end justify-end flex xl:pl-24"
           ></Image>
         </div>
         <div className="w-full md:2-1/2 p-4 md:p-6 flex flex-col justify-center">

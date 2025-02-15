@@ -10,13 +10,13 @@ import { motion } from "framer-motion";
 
 export default function FAQView() {
   return (
-    <section className="w-full h-screen mt-48 md:mt-0">
+    <section className=" w-full h-auto xl:h-screen px-6 py-24">
       <div className="text-center mb-8">
         <h2 className="text-orange-500 text-4xl font-bold">FAQ</h2>
       </div>
       <div>
-        <div className="w-full sm:px-8 md:px-10 mx-auto flex flex-col md:flex-row items-center md:mt-10">
-          <div className="w-full md:w-3/4 px-6 md:px-20">
+        <div className="w-full xl:px-[120px]   mx-auto flex flex-col md:flex-row items-center md:mt-10">
+          <div className="w-full md:w-3/4 ">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>
@@ -114,7 +114,7 @@ export default function FAQView() {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end px-6 md:px-10 mt-6 md:mt-0">
+          <div className="w-full md:w-1/4 flex justify-center md:justify-end mt-6 md:mt-0">
             <Image
               src="/images/robot-faq.png"
               width={300}

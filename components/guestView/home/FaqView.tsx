@@ -15,8 +15,8 @@ export default function FAQView() {
         <h2 className="text-orange-500 text-4xl font-bold">FAQ</h2>
       </div>
       <div>
-        <div className="w-full xl:px-[120px]   mx-auto flex flex-col md:flex-row items-center md:mt-10">
-          <div className="w-full md:w-3/4 ">
+        <div className="w-full xl:px-[80px] flex flex-col md:flex-row items-center md:mt-10">
+          <div className="w-full md:w-3/4 xl:px-[40px]">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>

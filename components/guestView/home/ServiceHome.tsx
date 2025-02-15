@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ServiceHome() {
   return (
-    <div className="bg-orange-500 py-10 px-4 md:px-10 lg:px-20">
+    <div className="bg-orange-500 py-24 w-full h-auto xl:h-screen">
       <div className="text-center max-w-2xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
           Layanan Kami

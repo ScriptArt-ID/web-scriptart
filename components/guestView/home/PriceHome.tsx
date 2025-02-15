@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Harga() {
   return (
-    <div className="">
+    <div className="w-full h-full xl:h-screen py-24">
       <div className="flex flex-col items-center justify-center px-6 py-10">
         {/* Judul Harga */}
         <h1 className="text-orange-500 text-3xl sm:text-4xl font-bold mb-6">
@@ -11,7 +11,7 @@ export default function Harga() {
         </h1>
 
         {/* Kontainer Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 items-center max-w-6xl w-full gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center max-w-6xl w-full xl:gap-10">
           {/* Gambar */}
           <div className="justify-center">
             <Image
@@ -24,7 +24,7 @@ export default function Harga() {
           </div>
 
           {/* Konten Teks */}
-          <div className="text-black space-y-4 col-span-2 align-top">
+          <div className="text-black space-y-4 col-span-2 align-top pt-4 xl:pt-0">
             <h2 className="text-2xl font-bold">Mulai Dari</h2>
             <p className="text-orange-500 text-xl font-semibold">
               Rp. 49.000,00

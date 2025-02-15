@@ -29,23 +29,23 @@ export default function Navbar() {
     <>
       {/* Navbar Desktop & Mobile Trigger */}
       <div
-        className={`fixed ${navBg ? "bg-white shadow-md" : "bg-transparent"} w-full transition-all duration-200 h-[12vh] z-[1000]`}
+        className={`fixed ${navBg ? "bg-white shadow-md" : "bg-transparent"} w-full transition-all duration-200 h-[12vh] z-40`}
       >
         {/* <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto"> */}
-        <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
-          <Image src={logo} alt="Logo" width={200} height={200} />
+        <div className="flex items-center h-full justify-between w-full xl:w-full xl:px-[120px] mx-auto">
+          <Image src={logo} alt="Logo" width={150} height={150} />
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-10 ">
             {navLinks.map((link) => (
               <Link key={link.id} href={link.url}>
-                <p className="nav__link text-3xl">{link.label}</p>
+                <p className="nav__link text-xl">{link.label}</p>
               </Link>
             ))}
           </div>
 
           {/* Mobile Navigation Trigger */}
-          <div className="lg:hidden">
+          <div className="lg:hidden px-4">
             <HiBars3BottomRight onClick={showNavHandler} className="w-8 h-8 cursor-pointer text-black" />
           </div>
         </div>

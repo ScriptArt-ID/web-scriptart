@@ -33,16 +33,16 @@ export default function HeroHome() {
     // </div>
     <div className="flex items-center justivy-center w-full h-screen p-4">
       <div className=" md:m-[100px] rounded-lg overflow-hidden flex flex-col md:flex-row-reverse w-full max-w-full ">
-        <div className="w-full items-end justify-end flex">
+        <div className="w-full xl:w-1/4 items-end justify-end flex">
           <Image
             src="/images/hero.png"
             alt="Image"
-            width={250}
-            height={250}
-            className="w-full h-full items-end justify-end flex xl:pl-24"
+            width={400}
+            height={400}
+            className="w-full  h-full items-end justify-end flex "
           ></Image>
         </div>
-        <div className="w-full md:2-1/2 p-4 md:p-6 flex flex-col justify-center">
+        <div className="w-full xl:w-3/4 p-4 md:p-6 flex flex-col justify-center">
           <h1 className="text-3xl md:text-5xl font-bold text-center md:text-start lg:text-start sm:text-4xl lg:text-6xl xl:text-7xl  md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-black">
             Bangun <span className="text-orange-500">Masa Depan</span>
           </h1>

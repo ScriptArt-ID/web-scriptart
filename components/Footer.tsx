@@ -6,14 +6,14 @@ import { BsYoutube } from "react-icons/bs";
 export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-gray-300">
-      <div className="w-full px-6 md:px-24 py-8 flex flex-wrap justify-between items-center">
+      <div className="w-full px-6 md:px-[120px] py-8 flex flex-wrap justify-between items-center">
         {/* Left Section */} 
-        <div className="max-w-md text-center md:text-left mb-6 md:mb-0">
+        <div className="max-w-md md:px-[22px] text-center md:text-left mb-6 md:mb-0">
           <Image
-            src="/assets/images/logo.png"
-            alt="LOGO"
-            width={100}
-            height={100}
+            src="/images/logo.png"
+            alt="logo"
+            width={150}
+            height={150}
             className="mx-auto md:ml-20"
           />
           <h2 className="text-xl font-bold mt-4 md:mt-0">

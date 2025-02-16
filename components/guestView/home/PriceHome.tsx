@@ -5,10 +5,7 @@ export default function Harga() {
   return (
     <div className="w-full h-full xl:h-screen py-24">
       <div className="flex flex-col items-center justify-center px-6 py-10">
-        {/* Judul Harga */}
-        <h1 className="text-orange-500 text-3xl sm:text-4xl font-bold mb-6">
-          Harga
-        </h1>
+
 
         {/* Kontainer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center max-w-6xl w-full xl:gap-10">

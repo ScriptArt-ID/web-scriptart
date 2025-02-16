@@ -12,7 +12,7 @@ export default function Harga() {
           {/* Gambar */}
           <div className="justify-center">
             <Image
-              src="/images/harga.png"
+              src="/assets/images/harga.png"
               alt="Harga Image"
               width={400}
               height={400}

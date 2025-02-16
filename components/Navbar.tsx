@@ -29,14 +29,16 @@ export default function Navbar() {
     <>
       {/* Navbar Desktop & Mobile Trigger */}
       <div
-        className={`fixed ${navBg ? "bg-white shadow-md" : "bg-transparent"} w-full transition-all duration-200 h-[12vh] z-40`}
+        className={`fixed ${
+          navBg ? "bg-white shadow-md" : "bg-transparent"
+        } w-full transition-all duration-200 h-[12vh] z-40`}
       >
         {/* <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto"> */}
         <div className="flex items-center h-full justify-between w-full xl:w-full xl:px-[120px] mx-auto">
           <Image src={logo} alt="Logo" width={150} height={150} />
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10 ">
+          <div className="hidden lg:flex items-center space-x-10 xl:text-orange-500">
             {navLinks.map((link) => (
               <Link key={link.id} href={link.url}>
                 <p className="nav__link text-xl">{link.label}</p>
@@ -46,16 +48,23 @@ export default function Navbar() {
 
           {/* Mobile Navigation Trigger */}
           <div className="lg:hidden px-4">
-            <HiBars3BottomRight onClick={showNavHandler} className="w-8 h-8 cursor-pointer text-black" />
+            <HiBars3BottomRight
+              onClick={showNavHandler}
+              className="w-8 h-8 cursor-pointer text-black"
+            />
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       <div>
-        <div className={`fixed ${navOpen} top-0 transform transition-all duration-500 z-[10000] left-0 right-0 bg-black opacity-70 w-full h-[100vh]`} />
+        <div
+          className={`fixed ${navOpen} top-0 transform transition-all duration-500 z-[10000] left-0 right-0 bg-black opacity-70 w-full h-[100vh]`}
+        />
         {/* <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-orange-500 space-y-6 z-[100006]`}> */}
-        <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-orange-500 space-y-6 z-[100006]`}>
+        <div
+          className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-orange-500 space-y-6 z-[100006]`}
+        >
           {navLinks.map((link) => (
             <Link key={link.id} href={link.url}>
               <p className="nav__link text-[20px] ml-12 border-b-[1.5px] pb-2 border-white sm:text-[30px] text-white">
@@ -63,7 +72,10 @@ export default function Navbar() {
               </p>
             </Link>
           ))}
-          <CgClose onClick={hideNavHandler} className="absolute top-[0.7rem] right-[1.4rem] cursor-pointer sm:w-8 sm:h-8 w-6 h-6 text-white" />
+          <CgClose
+            onClick={hideNavHandler}
+            className="absolute top-[0.7rem] right-[1.4rem] cursor-pointer sm:w-8 sm:h-8 w-6 h-6 text-white"
+          />
         </div>
       </div>
     </>

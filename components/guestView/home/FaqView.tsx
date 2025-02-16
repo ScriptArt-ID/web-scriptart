@@ -116,7 +116,7 @@ export default function FAQView() {
           </div>
           <div className="w-full md:w-1/4 flex justify-center md:justify-end mt-6 md:mt-0">
             <Image
-              src="/images/robot-faq.png"
+              src="/assets/images/robot-faq.png"
               width={300}
               height={300}
               alt="FAQ Robot"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { CgClose } from "react-icons/cg";
-import logo from "@/public/images/logo.png";
+import logo from "@/public/assets/images/logo.png";
 import { navLinks } from "@/constant/constant";
 
 export default function Navbar() {

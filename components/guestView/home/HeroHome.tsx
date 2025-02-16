@@ -1,57 +1,31 @@
-import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function HeroHome() {
   return (
-    // <div className="h-screen w-full">
-    //   {/* Hero */}
-    //   <div className="pt-[12vh] md:pt-[12vh] bg-white overflow-hidden">
-    //     <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
-    //       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-    //         {/* Hero Content */}
-    //         <div className="order-2 lg:order-1 lg:w-4/5">
-    //           <h1 className="text-center lg:text-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-black ">
-    //             Bangun <span className="text-orange-500">Masa Depan</span>{" "}
-    //           </h1>
-    //           <h1 className="text-center lg:text-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-black ">
-    //             <span className="text-orange-500">Digitalmu </span> Sekarang!
-    //           </h1>
-    //         </div>
-    //         {/* Hero Image */}
-    //         <div className="order-1 lg:order-2 flex justify-end ml-auto">
-    //           <Image
-    //             src="/images/hero.png"
-    //             width={800}
-    //             height={600}
-    //             alt="Hero"
-    //             className="object-cover"
-    //           ></Image>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="flex items-center justivy-center w-full h-screen p-4">
-      <div className=" md:m-[100px] rounded-lg overflow-hidden flex flex-col md:flex-row-reverse w-full max-w-full ">
-        <div className="w-full xl:w-1/4 items-end justify-end flex">
-          <Image
-            src="/images/hero.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-full  h-full items-end justify-end flex "
-          ></Image>
+    <div className="flex items-center justify-center w-full h-screen p-4 ">
+      <div className=" p-6 md:m-[80px] rounded-lg overflow-hidden flex flex-col md:flex-row-reverse w-full max-w-full">
+        <div className="w-full md:w-1/2 p-6">
+          <img src="/assets/images/homeRobots.png" alt="Login Illustration" className="w-full h-full object-cover" />
         </div>
-        <div className="w-full xl:w-3/4 p-4 md:p-6 flex flex-col justify-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-center md:text-start lg:text-start sm:text-4xl lg:text-6xl xl:text-7xl  md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-black">
-            Bangun <span className="text-orange-500">Masa Depan</span>
+
+        <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-center">
+          <h1 className="text-3xl md:text-6xl font-bold text-center md:text-start">BANGUN MASA DEPAN</h1>
+          <h1 className="text-3xl md:text-6xl font-bold text-center md:text-start">
+            DIGITALMU <span className="text-orange-500">SEKARANG!</span>
           </h1>
-          <h1 className="text-3xl md:text-5xl font-bold text-center md:text-start lg:text-start sm:text-4xl lg:text-6xl xl:text-7xl  md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-black">
-            <span className="text-orange-500">Digitalmu,</span> Sekarang!
-          </h1>
-          <h1 className="text-lg pt-4 flex-col text-gray-400 font-bold text-center md:text-start uppercase mt-2">
-            Inovasi, Kolaborasi, Prestasi
-          </h1>
+          
+          <h1 className="text-lg md:text-xl text-gray-400 font-bold text-center md:text-start uppercase mt-2">Siap Membantu Kesulitan Anda!</h1>
+          <div className="flex pt-4 flex-col md:flex-row items-center gap-6 md:gap-8">
+            <Link
+              href="#about"
+              className="flex items-center gap-2 text-white bg-orange-500 px-5 py-2 rounded-lg font-semibold transition duration-300 ease-in-out hover:bg-[#2c4cca]"
+            >
+              {" "}
+              TENTANG KAMI
+              <IoArrowForwardCircleOutline size={24} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Left Section */} 
         <div className="max-w-md md:px-[22px] text-center md:text-left mb-6 md:mb-0">
           <Image
-            src="/images/logo.png"
+            src="/assets/images/logo.png"
             alt="logo"
             width={150}
             height={150}

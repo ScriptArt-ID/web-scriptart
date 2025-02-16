@@ -7,8 +7,14 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { CgClose } from "react-icons/cg";
 import logo from "@/public/assets/images/logo.png";
 import { navLinks } from "@/constant/constant";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname(); 
+
+
+  if (pathname.startsWith("/admin")) return null;
+
   const [showNav, setShownNav] = useState(false);
   const [navBg, setNavBg] = useState(false);
 

@@ -1,13 +1,21 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
 import { BsYoutube } from "react-icons/bs";
+import { usePathname } from "next/navigation"; 
 
 export default function Footer() {
+  const pathname = usePathname(); 
+
+ 
+  if (pathname.startsWith("/admin")) return null;
+
   return (
     <footer className="w-full bg-white border-t border-gray-300">
       <div className="w-full px-6 md:px-[120px] py-8 flex flex-wrap justify-between items-center">
-        {/* Left Section */} 
+        {/* Left Section */}
         <div className="max-w-md md:px-[22px] text-center md:text-left mb-6 md:mb-0">
           <Image
             src="/assets/images/logo.png"

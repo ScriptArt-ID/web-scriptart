@@ -9,7 +9,7 @@ export default function Harga() {
       </div>
       <div className="flex flex-col items-center justify-center px-6 py-10">
         {/* Kontainer Grid */}
-        <div className="grid grid-cols-1 md:flex flex-row items-center  w-full xl:gap-10 md:px-[80px]">
+        <div className="grid grid-cols-1 md:flex flex-row items-center  w-full xl:gap-10 md:px-[85px] ">
           {/* Gambar */}
           <div className="justify-center ">
             <Image

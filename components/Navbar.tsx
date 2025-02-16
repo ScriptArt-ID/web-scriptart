@@ -38,7 +38,7 @@ export default function Navbar() {
           <Image src={logo} alt="Logo" width={150} height={150} />
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10 xl:text-orange-500">
+          <div className="hidden lg:flex items-center space-x-10 md:text-orange-500">
             {navLinks.map((link) => (
               <Link key={link.id} href={link.url}>
                 <p className="nav__link text-xl">{link.label}</p>

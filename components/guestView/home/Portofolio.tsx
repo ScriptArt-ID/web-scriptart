@@ -52,8 +52,8 @@ export default function Portofolio() {
   };
 
   return (
-    <div className="md:h-screen h-full w-full ">
-      <div className=" md:h-screen h-full pt-24 lg:px-24">
+    <div className="lg:h-[120vh] h-auto w-full ">
+      <div className=" md:h-auto h-full pt-24 lg:px-24">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 text-center">
           Portofolio
         </h1>
@@ -73,12 +73,15 @@ export default function Portofolio() {
             </button>
           ))}
         </div>
-        <div className="px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center gap-[36px]">
+        <div className="px-10 h-auto">
+          <div className="grid grid-cols-1 h-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center gap-[36px]">
             {filteredWebs.map((web) => (
-              <div key={web.id} className="flex flex-col rounded-xl space-y-4 shadow-md">
+              <div
+                key={web.id}
+                className="flex h-[38vh] flex-col rounded-xl space-y-4 shadow-md"
+              >
                 <Image
-                  className="h-auto max-w-full rounded-lg aspect-video object-cover"
+                  className="h-auto max-w-full rounded-t-lg aspect-video object-cover"
                   src={web.imageUrl}
                   alt={web.titleWebs}
                   width={620}

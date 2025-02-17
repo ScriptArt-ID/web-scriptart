@@ -10,8 +10,7 @@ import { navLinks } from "@/constant/constant";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname(); 
-
+  const pathname = usePathname();
 
   if (pathname.startsWith("/admin")) return null;
 

@@ -65,9 +65,11 @@ export default function TestimoniView() {
     );
   };
   return (
-    <section className="w-full h-screen text-center py-12">
+    <section className="w-full h-screen text-center py-12 px-8">
       <h2 className="text-4xl font-bold text-orange-500">Testimoni</h2>
-      <p className="text-gray-600 mt-2">Apa yang mereka katakan tentang kami.</p>
+      <p className="text-gray-600 mt-2">
+        Apa yang mereka katakan tentang kami.
+      </p>
       <div className="w-full h-screen mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden px-6 md:px-28">
           {testimonials

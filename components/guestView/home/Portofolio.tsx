@@ -4,6 +4,7 @@ import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import { webCollection } from "@/lib/firebase";
 import { getDocs } from "firebase/firestore";
+import { motion } from "framer-motion";
 
 interface Web {
   id: string;
@@ -52,14 +53,22 @@ export default function Portofolio() {
   };
 
   return (
-    <div className="lg:h-[120vh] h-auto w-full ">
-      <div className=" md:h-auto h-full pt-24 lg:px-24">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 text-center">
+    <div className="lg:h-[120vh] h-auto w-full">
+      <div className="md:h-auto h-full pt-24 lg:px-24">
+        {/* Animasi judul */}
+        <motion.h1
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 text-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", bounce: 0.3 }}
+        >
           Portofolio
-        </h1>
+        </motion.h1>
+
+        {/* Tombol kategori dengan efek hover */}
         <div className="flex items-center justify-center py-4 md:py-8 flex-wrap lg:pt-10">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category}
               type="button"
               className={`px-5 py-2.5 text-base font-medium rounded-full me-3 mb-3 border focus:ring-4 transition ${
@@ -67,18 +76,35 @@ export default function Portofolio() {
                   ? "bg-orange-500 text-white border-orange-500"
                   : "bg-white text-gray-900 border-gray-300 hover:border-gray-400"
               }`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => handleFilter(category)}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </div>
+
+        {/* Card portofolio dengan efek animasi */}
         <div className="px-10 h-auto">
-          <div className="grid grid-cols-1 h-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center gap-[36px]">
+          <motion.div
+            className="grid grid-cols-1 h-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center gap-[36px]"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+            }}
+          >
             {filteredWebs.map((web) => (
-              <div
+              <motion.div
                 key={web.id}
-                className="flex h-[38vh] flex-col rounded-xl space-y-4 shadow-md"
+                className="flex h-[38vh] flex-col rounded-xl space-y-4 shadow-md overflow-hidden bg-white"
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+                whileHover={{ scale: 1.05 }}
               >
                 <Image
                   className="h-auto max-w-full rounded-t-lg aspect-video object-cover"
@@ -100,14 +126,18 @@ export default function Portofolio() {
                     rel="noopener noreferrer"
                     className="pt-4 mt-1"
                   >
-                    <div className="flex flex-row items-center justify-center h-[44px] w-[44px] rounded-full bg-blue-300 space-x-1">
+                    <motion.div
+                      className="flex flex-row items-center justify-center h-[44px] w-[44px] rounded-full bg-blue-300 space-x-1"
+                      whileHover={{ scale: 1.2, rotate: 15 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
                       <GoArrowUpRight className="w-16 h-16 cursor-pointer" />
-                    </div>
+                    </motion.div>
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
